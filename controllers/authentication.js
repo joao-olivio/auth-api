@@ -32,4 +32,4 @@ exports.signup = function (request, response, next) {
         });
 
     });   
-}
+};
