@@ -1,8 +1,5 @@
+const authRouter = require('./authRouter');
+
 module.exports = function (app) {
-    app.get('/', function (request, response, next) {
-        response.send([
-            'Hello',
-            'Word'
-        ])
-    });
+    authRouter(app);
 }
