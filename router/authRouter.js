@@ -1,5 +1,8 @@
 const Authentication = require('../controllers/Authentication');
+const authRouter = require('express')();
 
-module.exports = function (app) {
-    app.post('/signup', Authentication.signup);
-}
+
+authRouter.post('/signup', Authentication.signup);
+
+
+module.exports = authRouter;
