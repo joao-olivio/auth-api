@@ -33,3 +33,9 @@ exports.signup = function (request, response, next) {
 
     });   
 };
+
+exports.signin = function (request, response, next) {
+    // User has already had their email and password auth'd
+    // We just nedd to give them a token
+    response.send({token: tokenForUser(request.user)});
+}
